@@ -1,0 +1,124 @@
+.promo-card {
+  background: linear-gradient(180deg, #8e79cf 0%, #715ac9 100%);
+  color: #fff;
+  border-radius: 14px;
+  border: 1px solid #b89ff9;
+  box-shadow: 0 8px 32px 0 rgba(32, 27, 66, 0.16);
+  width: 100%;
+  max-width: 100%;
+  max-height: 426px;
+  overflow: hidden;
+  padding: 28px 26px 24px 26px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 11px;
+}
+
+.shadow-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60%; /* Adjust as needed for effect */
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(93, 70, 169, 0) 20.05%,
+    #5d46a9 88.24%
+  );
+  transition: opacity 0.4s cubic-bezier(0.82, 0.01, 0.52, 0.99);
+}
+.shadow-wrapper {
+  transition: max-height 0.5s cubic-bezier(0.82, 0.01, 0.52, 0.99);
+  max-height: 426px;
+  overflow: hidden;
+}
+
+.shadow-wrapper.expanded {
+  /* The JS will set this dynamically, so leave empty */
+}
+.shadow-wrapper.expanded::after {
+  opacity: 0;
+}
+.promo-card.expanded,
+.shadow-wrapper.expanded {
+  max-height: 1900px; /* Large enough for full card content */
+  transition: max-height 0.5s cubic-bezier(0.82, 0.01, 0.52, 0.99);
+}
+.promo-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.promo-card h3 {
+  margin: 0 0 18px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+.promo-card p {
+  font-family: "Poppins";
+  margin: 0 0 13px 0;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: justify;
+}
+.promo-card p:last-of-type {
+  color: #fff;
+  font-size: 11px;
+  margin-bottom: 8px;
+  height: 20px;
+}
+.see-more-btn {
+  display: block;
+  margin: 18px auto 0 auto;
+  background: #ffd974;
+  color: #7a63b8;
+  font-weight: 700;
+  font-size: 15px;
+
+  border: none;
+  border-radius: 42px;
+  box-shadow: 0 1px 8px 0 #c2a82833;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9;
+  width: 92px;
+  height: 27px;
+  border: 1px solid;
+  /* border-image-source: linear-gradient(180deg, #FFF2D8 0%, #BA7645 100%); */
+  background: #ffd683;
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #4d3b88;
+}
+.see-more-btn:hover {
+  box-shadow: 0 6px 22px 0 #c2a82866;
+  background: #ffe9a3;
+}
+@media (min-width: 1024px) {
+  .promo-card {
+    max-height: 210px;
+  }
+}

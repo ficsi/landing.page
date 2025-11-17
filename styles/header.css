@@ -1,0 +1,125 @@
+
+.header{
+  background: linear-gradient(180deg, #432e80 0%, #1e1e3a 100%);
+justify-content: center;
+}
+.header .wrapper {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+}
+.header .wrapper{
+  height: 100%;
+  position: relative;
+}
+.header.--mobile {
+  display: flex;
+}
+.header .logo img {
+  cursor: pointer;
+  height: 32px;
+}
+.header .group {
+  display: flex;
+  flex-direction: row;
+}
+.header .group.--small-group {
+  gap: 7px;
+  margin: 0 42px;
+}
+.header .icon-wrapper {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .icon-wrapper img {
+  height: 22px;
+  width: 22px;
+}
+.header .icon-wrapper img[alt="marker"] {
+  height: 24px;
+  width: 24px;
+}
+.header .icon-wrapper .badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #ecaf43;
+  color: #000000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a1337;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.header .right-group {
+  gap: 7px;
+}
+.wallet .wrapper{
+  padding-left: 13px;
+  padding-right: 0;
+}
+.stage-header.banner {
+  background: linear-gradient(180deg, #4f4393 -52.27%, #45347e 106.36%);
+}
+.stage-header.banner a {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+.stage-header.banner img {
+  max-height: 130px;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: inherit;
+}
+.stage-header.banner:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(114.35deg, #4857f5 -10.77%, #8d5d26 77.05%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+@media (min-width: 1420px) {
+  .stage-header.banner {
+    height: 162px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding-left: 36px;
+    padding-right: 36px;
+    height: 90px;
+  }
+
+  .group.--small-group {
+    position: absolute;
+    right: 196px;
+  }
+}

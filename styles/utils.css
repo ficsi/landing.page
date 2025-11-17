@@ -1,0 +1,100 @@
+.gradient-border {
+  cursor: pointer;
+  position: relative;
+  border-radius: 100%; /* your radius */
+
+  /* The trick: two backgrounds */
+  border: 1.09px solid transparent;
+  background-image: linear-gradient(#221d47, #221d47),
+    /* inner */ linear-gradient(114.35deg, #9c5bff -10.77%, #42268d 77.05%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+.rotating-gradient-border {
+  --t: 0; /* color flip progress */
+  --angle: 0deg; /* rotation progress */
+
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 2px;
+
+  /* Background: inner color + animated border */
+  background: linear-gradient(#6a3beb, #6a3beb) padding-box,
+    conic-gradient(
+        from var(--angle),
+        color-mix(
+          in srgb,
+          #c490ff calc((1 - var(--t)) * 100%),
+          #5d46a9 calc(var(--t) * 100%)
+        ),
+        color-mix(
+          in srgb,
+          #5d46a9 calc((1 - var(--t)) * 100%),
+          #c490ff calc(var(--t) * 100%)
+        )
+      )
+      border-box;
+
+  transition: --t 0.5s ease, --angle 0.6s cubic-bezier(0.45, 0.15, 0.2, 1);
+}
+
+/* Hover triggers both: rotation + color inversion */
+.gradient-border:hover {
+  transform: scale(1);
+  box-shadow: 0 0 12px rgba(156, 91, 255, 0.5), 0 0 24px rgba(66, 38, 141, 0.4); /* glow gradient feel */
+}
+
+.wallet.gradient-border {
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50px;
+  height: 34px;
+  gap: 12px;
+}
+.wallet .wrapper {
+  background: #1e1e3a;
+
+  padding: 12px 0 12px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50px;
+  height: 32px;
+  gap: 12px;
+}
+.wallet.gradient-border .plus {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #FFFFFF1A; */
+
+  background: linear-gradient(176.15deg, #7456de -40.9%, #24184d 116.82%);
+
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.wallet.gradient-border .plus img {
+  width: 12px;
+  height: 12px;
+}
+.stage-header.banner {
+  box-shadow: 0 12px 9px -2px #2b2a48;
+}
+.title {
+  width: 100%;
+}

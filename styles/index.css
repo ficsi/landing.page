@@ -1,0 +1,8 @@
+@import './reset.css';
+@import 'global.css';
+@import './utils.css';
+
+@import './header.css';
+@import './offers.css';
+@import './promo.css';
+@import './prefooter.css';
