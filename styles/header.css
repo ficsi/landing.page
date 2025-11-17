@@ -91,11 +91,11 @@ justify-content: center;
   aspect-ratio: auto;
 }
 .stage-header.banner img {
-  max-height: 60px;
   width: 100%;
   max-width: 100%;
   display: block;
   height: auto;
+  aspect-ration: 170/60;
 }
 .stage-header.banner:before {
   content: "";
@@ -112,6 +112,13 @@ justify-content: center;
   .stage-header.banner {
     height: 162px;
   }
+  .stage-header.banner img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  aspect-ration: 360/130;
+}
 }
 @media (min-width: 1024px) {
   .header {
@@ -128,5 +135,6 @@ justify-content: center;
     right: 196px;
   }
 }
+
 
 
