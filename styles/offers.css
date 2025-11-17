@@ -251,3 +251,9 @@
     top: 42px;
   }
 }
+
+@media only screen and (min-width: 480px) and (max-width: 520px){
+.cards {
+    gap: 20px;
+}
+}
