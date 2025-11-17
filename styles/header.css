@@ -87,15 +87,15 @@ justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   box-sizing: border-box;
-      width: auto;
-    aspect-ratio: auto;
+  width: auto;
+  aspect-ratio: auto;
 }
 .stage-header.banner img {
-  max-height: 130px;
+  max-height: 60px;
   width: 100%;
   max-width: 100%;
   display: block;
-  height: inherit;
+  height: auto;
 }
 .stage-header.banner:before {
   content: "";
@@ -119,10 +119,14 @@ justify-content: center;
     padding-right: 36px;
     height: 90px;
   }
+.stage-header.banner img {
+  max-height: 130px;
 
+}
   .group.--small-group {
     position: absolute;
     right: 196px;
   }
 }
+
 
