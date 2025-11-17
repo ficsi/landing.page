@@ -119,6 +119,10 @@ justify-content: center;
   height: auto;
   aspect-ratio: 360/130;
 }
+  .stage-header.banner img {
+  max-height: 130px;
+
+}
 }
 @media (min-width: 1024px) {
   .header {
@@ -126,15 +130,13 @@ justify-content: center;
     padding-right: 36px;
     height: 90px;
   }
-.stage-header.banner img {
-  max-height: 130px;
 
-}
   .group.--small-group {
     position: absolute;
     right: 196px;
   }
 }
+
 
 
 
